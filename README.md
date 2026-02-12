@@ -1,10 +1,12 @@
-# Pair Demo
+# Ai_DataPipeline_and_Analyzer
 
-AI-driven data pipeline: **one sentence → chart**. You say what you want to analyze; the AI picks dimension, metric, and chart type, then the app queries the DB and shows the chart.
+AI-driven data pipeline: **one sentence → chart**. You say what you want to analyze; the AI picks dimension, metric, and chart type, then the app queries the Database and Draws the chart which you can download.
 
-## Where is the model?
+## Where is the Large Language model?
 
 The model runs **locally** via Ollama. It is **not** stored in this project folder. Ollama keeps models in its own directory (on macOS often `~/.ollama/models`). This app talks to `http://localhost:11434`; no API key needed.
+
+Note that: everything of this application is only useable when you deployed LLMs, data sources and databases locaolly, if you have LLMs or databases which deployed in cloud platform, you can insert the API keys yourself.
 
 ## How to run
 
@@ -25,14 +27,17 @@ The model runs **locally** via Ollama. It is **not** stored in this project fold
 3. **Start Ollama** (if not already running):
    ```bash
    brew services start ollama   # or open the Ollama app
-   ollama pull qwen2.5:7b       # if you haven’t already
+   ollama pull qwen2.5:7b       # if you haven’t already, you can also pull whaterver it is on your computer
    ```
 
 4. **Launch the dashboard**:
    ```bash
    streamlit run Dashboard/app.py
    ```
-   Open the URL, **choose a data source** in the sidebar (Sales / Events), run ETL for it if needed, then type what you want (e.g. *sales by category*, *revenue by country*), click **Generate chart**.
+   
+   After running this there should be a URL in your terminal which will be a localhost address, it is a front-end page of this application.
+   
+   Open the URL, **choose a data source** in the sidebar (Sales / Events), run ETL for it to load datasource into the database if needed, then type what you want (e.g. *sales by category*, *revenue by country*), click **Generate chart**.
 
 ## Data sources (multi-source)
 
