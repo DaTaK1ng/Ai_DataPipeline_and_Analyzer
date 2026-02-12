@@ -53,4 +53,3 @@ After you have `data/raw/sales.csv`, the **scripts/** folder is optional. You ca
 ## Local AI
 
 See **OLLAMA_SETUP.md** for installing Ollama and pulling a model.
-# Ai_Analyzer
