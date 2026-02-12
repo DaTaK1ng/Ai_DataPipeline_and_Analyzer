@@ -20,7 +20,7 @@ The model runs **locally** via Ollama. It is **not** stored in this project fold
    python ETL/run_etl.py           # sales -> db/app.duckdb
    python ETL/run_etl.py events    # events -> db/events.duckdb
    ```
-   You can also run ETL from the dashboard sidebar ("为此数据源运行 ETL").
+   You can also run ETL from the dashboard sidebar ("Run ETL for this data source").
 
 3. **Start Ollama** (if not already running):
    ```bash
